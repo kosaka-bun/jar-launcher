@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarLauncher", "JarLauncher.csproj", "{FAC8B97A-C095-4852-9F90-4266F65B1B18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAC8B97A-C095-4852-9F90-4266F65B1B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC8B97A-C095-4852-9F90-4266F65B1B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC8B97A-C095-4852-9F90-4266F65B1B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC8B97A-C095-4852-9F90-4266F65B1B18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
