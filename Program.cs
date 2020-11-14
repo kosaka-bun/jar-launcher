@@ -18,6 +18,13 @@ internal static class Program {
         var launcher = new Launcher();
         launcher.checkVmOptionsFile();
         string vmOptions = launcher.readVmOptions();
+        launcher.launch(vmOptions, args[0]);
+    }
+}
+
+internal class Launcher {
+
+    public void launch(string vmOptions, string jarPath) {
         //启动命令行
         var process = new Process {
             StartInfo = {
@@ -37,15 +44,12 @@ internal static class Program {
         };
         //启动程序
         process.Start();
-        process.StandardInput.WriteLine($"javaw {vmOptions} -jar \"{args[0]}\"");
+        process.StandardInput.WriteLine($"javaw {vmOptions} -jar \"{jarPath}\"");
         process.StandardInput.WriteLine("exit");   //需要有这句，不然程序会挂机
         //等待程序执行完退出进程
         process.WaitForExit();
         process.Close();
     }
-}
-
-internal class Launcher {
 
     public string readVmOptions() {
         var fileStream = new FileStream(vmOptionsPath, FileMode.Open,
