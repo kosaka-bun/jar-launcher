@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+
 // ReSharper disable InconsistentNaming
 // ReSharper disable MemberCanBeMadeStatic.Global
 // ReSharper disable StringLiteralTypo
@@ -12,7 +13,8 @@ internal static class Program {
     private static void Main(string[] args) {
         if (args.Length < 1) {
             MessageBox.Show("没有提供要打开的文件", "JarLauncher",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxButtons.OK, MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             return;
         }
         var launcher = new Launcher();
